@@ -7,11 +7,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "usuario", schema = "financas")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 
 	@Id
@@ -27,13 +33,5 @@ public class Usuario {
 
 	@Column(name = "senha")
 	private String senha;
-
-	public static void main(String[] args) {
-		Usuario usuario = new Usuario();
-		
-		usuario.setEmail("teste@teste");
-		usuario.setSenha("123");
-		usuario.setNome("nome");
-	}
 
 }

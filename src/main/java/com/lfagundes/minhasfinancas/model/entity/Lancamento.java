@@ -17,11 +17,18 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
+import com.lfagundes.minhasfinancas.model.enums.StatusLancamento;
+import com.lfagundes.minhasfinancas.model.enums.TipoLancamento;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="lancamento", schema = "financas")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 
 	@Id
